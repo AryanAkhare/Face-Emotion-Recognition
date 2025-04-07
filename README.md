@@ -23,16 +23,3 @@ Project Overview:<br>
 <p>We start with downloading the required dataset from Kaggle. Once the data is available, the training and validation sets are defined.</p> <p>The next step is to preprocess the datasets; this includes rescaling the data by multiplying it by 1/255 to obtain the target values in the range [0,1] and performing data augmentation for artificially creating new data. Data augmentation also helps to increase the size and introduce variability in the dataset.</p> <p>After preparing the data, we construct the required CNN model using TensorFlow and Keras libraries to recognize the facial emotions of a user. This model consists of four convolutional layers and three fully connected layers to process the input image data and predict the required output. In between each layer, a Max Pooling and Dropout layer was added for downsampling the data and preventing our model from overfitting. Finally, for compiling all the layers, we have used the Adam optimizer, with loss function as Categorical Cross entropy and accuracy as the metric for evaluation.</p> <p>Once the model was ready, we trained it using the prepared data.</p> <p>The model achieved an accuracy of 77% on the training set and 64% on the validation set after fifteen epochs.</p> <p>From the confusion matrix, we saw that the model accurately predicts most classes, but the performance is comparatively lower in classes angry and fear. Less amount of data present for these classes might be the reason for this.</p> <p>Finally, using an image passed through our model, we confirmed that it could correctly recognize the emotions.</p> <p>Additionally, using OpenCV and Streamlit, we created a web app to monitor live facial emotion recognition. The web app successfully identified each class and also was able to detect multiple faces and their respective emotions.</p>
 The link for the web app:
 
-Live Facial Emotion Recognition:
-Demo video to display the working of our web app deployed on streamlit.
-https://user-images.githubusercontent.com/87002524/170706372-9cadcd73-2f1e-41d2-b61a-d9b8042cbd95.mp4
-
-For reference:<br>
-https://towardsdatascience.com/face-detection-recognition-and-emotion-detection-in-8-lines-of-code-b2ce32d4d5de
-
-https://towardsdatascience.com/video-facial-expression-detection-with-deep-learning-applying-fast-ai-d9dcfd5bcf10
-
-https://github.com/atulapra/Emotion-detection
-
-https://medium.com/analytics-vidhya/building-a-real-time-emotion-detector-towards-machine-with-e-q-c20b17f89220
-
